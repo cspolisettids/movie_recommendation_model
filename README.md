@@ -12,3 +12,5 @@ Movie_Recommendation_Model-Report.Rmd
 An R program for predicting the ratings is listed below
 
 Movie_Recommendation_Model-Algorithm.R
+
+Please make sure that the preamble.tex is present in the current directory for running the Movie_Recommendation_Model-Report.Rmd report.
