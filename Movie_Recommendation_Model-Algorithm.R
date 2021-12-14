@@ -200,7 +200,7 @@ RMSE <- function(true_ratings, predicted_ratings){
 
 # Create Table to track RMSE Results
 rmse_target <- 0.86490
-rmse_tracking <- data.frame(Method = "Project Goal RMSE", RMSE = "0.86490", Diff_Wrt_Project_Goal_RMSE = "-")
+rmse_tracking <- data.frame(Method = "Project Goal RMSE", RMSE = "0.86490", Diff_Wrt_Goal = "-")
 
 ###############################################################################################################
 #                          Step5:  Movie Recommendation Model - Optimization using Cross Validation-----
@@ -488,12 +488,12 @@ valiation_rmse <- RMSE(predicted_ratings, validation$rating)
 #  Document the results in a table and output the results to the console
 
 # Add the movie release year effect to RMSE tracking table and print the output
-rmse_tracking <- rmse_tracking %>% rbind(c("Optimized Movie Recommendation Model 
-                                           - Performance in Tesing With Validation Dataset", 
+rmse_tracking <- rmse_tracking %>% rbind(c("Optimized Movie Recommendation Model - Performance with Validation Dataset", 
                                            round(valiation_rmse,5), 
                                            round(valiation_rmse-rmse_target,5)))
 
 rmse_tracking %>% as_tibble()
+
 
 print("Final Model Validation Results")
 
